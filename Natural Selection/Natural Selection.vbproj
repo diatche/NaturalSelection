@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47790ECB-6EE7-4AA5-8767-6CA27F17130A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Natural_Selection.My.MyApplication</StartupObject>
+    <RootNamespace>Natural_Selection</RootNamespace>
+    <AssemblyName>Natural Selection</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ManifestCertificateThumbprint>3AA50A445FE9F4351161BFA2AB08FBBE34A904ED</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Natural Selection_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>C:\Natural Selection\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Natural Selection.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Natural Selection.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2905.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Environment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environment.Designer.vb">
+      <DependentUpon>Environment.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gatherer.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Plant.vb" />
+    <Compile Include="Soil.vb" />
+    <Compile Include="Visual.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Environment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Environment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Natural Selection_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vis\FamilySelected.png" />
+    <Content Include="Vis\Fertility.png" />
+    <Content Include="Vis\Fertility1.png" />
+    <Content Include="Vis\Fertility2.png" />
+    <Content Include="Vis\Fertility3.png" />
+    <Content Include="Vis\Fertility4.png" />
+    <Content Include="Vis\Fertility5.png" />
+    <Content Include="Vis\gatherer.png" />
+    <Content Include="Vis\GathererDead.png" />
+    <Content Include="Vis\GathererDividing.png" />
+    <Content Include="Vis\GathererFamily.png" />
+    <Content Include="Vis\GathererFeeding.png" />
+    <Content Include="Vis\GathererFleeing.png" />
+    <Content Include="Vis\GathererHit.png" />
+    <Content Include="Vis\GathererLook1.png" />
+    <Content Include="Vis\GathererLook2.png" />
+    <Content Include="Vis\GathererLook3.png" />
+    <Content Include="Vis\GathererLook4.png" />
+    <Content Include="Vis\GathererLook5.png" />
+    <Content Include="Vis\GathererLook6.png" />
+    <Content Include="Vis\GathererLook7.png" />
+    <Content Include="Vis\GathererLook8.png" />
+    <Content Include="Vis\GathererReach1.png" />
+    <Content Include="Vis\GathererReach2.png" />
+    <Content Include="Vis\GathererReach3.png" />
+    <Content Include="Vis\GathererReach4.png" />
+    <Content Include="Vis\GathererReach5.png" />
+    <Content Include="Vis\GathererReach6.png" />
+    <Content Include="Vis\GathererReach7.png" />
+    <Content Include="Vis\GathererReach8.png" />
+    <Content Include="Vis\GathererStatsHealth1.png" />
+    <Content Include="Vis\GathererStatsHealth2.png" />
+    <Content Include="Vis\GathererStatsHealth3.png" />
+    <Content Include="Vis\GathererStatsHealth4.png" />
+    <Content Include="Vis\GathererStatsHealth5.png" />
+    <Content Include="Vis\GathererStatsHealth6.png" />
+    <Content Include="Vis\GathererStatsHealth7.png" />
+    <Content Include="Vis\GathererStatsHealth8.png" />
+    <Content Include="Vis\GathererTail.png" />
+    <Content Include="Vis\GathererTailDead.png" />
+    <Content Include="Vis\GathererTalking.png" />
+    <Content Include="Vis\plant.png" />
+    <Content Include="Vis\PlantDead.png" />
+    <Content Include="Vis\PlantDeadLeaf.png" />
+    <Content Include="Vis\PlantDeadStem.png" />
+    <Content Include="Vis\PlantFood1.png" />
+    <Content Include="Vis\PlantFood2.png" />
+    <Content Include="Vis\PlantFood3.png" />
+    <Content Include="Vis\PlantFood4.png" />
+    <Content Include="Vis\PlantFood5.png" />
+    <Content Include="Vis\PlantLeaf.png" />
+    <Content Include="Vis\PlantStem.png" />
+    <Content Include="Vis\Selected.png" />
+    <Content Include="Vis\SelectedPlant.png" />
+    <Content Include="Vis\SelectedSoil.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
