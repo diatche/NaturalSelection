@@ -2,6 +2,8 @@
 
 A natural selection simulation written in VB.NET.
 
+![screenshot_1](./docs/screenshot_1.png)
+
 ## Installation
 
 - This project requires .Net 2.0 and [DirectX SDK](http://microsoft.com/download/details.aspx?id=6812).
